@@ -14,7 +14,7 @@ public class UserRecource {
 	
 	@GetMapping
 	public ResponseEntity<User> findAll(){
-		User isac = new User((byte) 1, "isac" , "isacjobz@gmail.com", "174.137.857-57", "IsacSantos");
+		User isac = new User("isac" , "isacjobz@gmail.com", "174.137.857-57", "IsacSantos");
 		return ResponseEntity.ok().body(isac);
 	}
 }

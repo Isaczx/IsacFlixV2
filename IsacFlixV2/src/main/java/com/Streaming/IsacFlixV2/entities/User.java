@@ -17,7 +17,7 @@ public class User implements Serializable {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private byte id;
+	private int id;
 	@Column(name = "nome")
 	private String name;
 	@Column(name = "email")
@@ -31,20 +31,19 @@ public class User implements Serializable {
 		
 	}
 
-	public User(byte id, String name, String email, String CPF, String password) {
+	public User(String name, String email, String CPF, String password) {
 		super();
-		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.CPF = CPF;
 		this.password = password;
 	}
 
-	public byte getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(byte id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
